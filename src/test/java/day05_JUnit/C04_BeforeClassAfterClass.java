@@ -15,6 +15,10 @@ public class C04_BeforeClassAfterClass {
          en son @AfterClass'ı çalıştırırız.
          Ama sadece @Before ve @After kullanırsak her test için @Before ve @After'ı kullanır
 
+         Eğer test sınıfında birden fazla test methodu oluşturulursa "before" kullanılır çünkü her bir test methpdundan önce
+         driver kullanılmalı
+         Tek bir test yapacaksak before veya beforeclass kullanılabilir,farketmez
+
      */
 
     @BeforeClass

@@ -9,6 +9,7 @@ import org.junit.Test;
 Before : her test methodundan önce bir sefer çalışır
 After : her test methodundan sonra bir sefer çalışır
 before after lar her testte çalışır
+
  */
 public class C02_BeforeAfter {
 
