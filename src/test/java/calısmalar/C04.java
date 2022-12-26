@@ -37,24 +37,7 @@ public class C04 {
         driver.findElement(By.xpath("//*[text()='New']")).click();
 
         //    And editor firstname kutusuna "<firstName>" bilgileri girer
-        driver.findElement(By.cssSelector("input[id='DTE_Field_first_name']")).sendKeys("afirstName");
-
-        //    And editor lastname kutusuna "<lastName>" bilgileri girer
-        driver.findElement(By.cssSelector("input[id='DTE_Field_last_name']")).sendKeys("lastName");
-
-        //    And editor position kutusuna "<position>" bilgileri girer
-        driver.findElement(By.cssSelector("input[id='DTE_Field_position']")).sendKeys("position");
-
-        //    And editor office kutusuna "<office>" bilgileri girer
-        driver.findElement(By.cssSelector("input[id='DTE_Field_office']")).sendKeys("office");
-
-        //    And editor extension kutusuna "<extension>" bilgileri girer
-        driver.findElement(By.cssSelector("input[id='DTE_Field_extn']")).sendKeys("extn");
-
-        //    And editor startdate kutusuna "<startDate>" bilgileri girer
-        driver.findElement(By.cssSelector("input[id='DTE_Field_start_date']")).sendKeys("2022-12-24");
-        //    And editor salary kutusuna "<salary>" bilgileri girer
-        driver.findElement(By.cssSelector("input[id='DTE_Field_salary']")).sendKeys("1627");
+        driver.findElement(By.cssSelector("input[id='DTE_Field_first_name']")).sendKeys("Ahmet", Keys.TAB,"Yılmaz",Keys.TAB,"Tester",Keys.TAB,"Bursa",Keys.TAB,"Exten",Keys.TAB,"2022-12-24",Keys.TAB,"1628");
         //    When Create tusuna basar
         Thread.sleep(3000);
         driver.findElement(By.cssSelector("button[class='btn']")).click();
@@ -70,16 +53,19 @@ public class C04 {
         driver.findElement(By.cssSelector("button[class='btn']")).click();
 
         //    Then Kullanıcinin silindiğini doğrular.
+        driver.findElement(By.cssSelector("input[type='search']")).sendKeys("Ahmet Yılmaz");
+//        driver.findElement(By.className("dataTables_empty"));
+        Assert.assertTrue(driver.findElement(By.className("dataTables_empty")).isDisplayed());
 
-        List<WebElement> isimler = driver.findElements(By.cssSelector("th[class='sorting sorting_desc']"));
-       for (WebElement w : isimler){
-           Assert.assertFalse(w.equals("afirstname"));
-       }
+
 
         //    */
 
     }
 
 
-}
+    }
+
+
+
 
