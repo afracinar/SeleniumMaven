@@ -16,7 +16,11 @@ import java.util.List;
 
 public class C01_Dropdown {
 
+    //INTERVİEWW :: imp..seleniumdan gelir thread.sleep ise javadan gelir
+
     /*
+    DropDown nedir?
+       Açılır menü.Birden fazla seçeneği koyabileceğimiz menü
         Developer dropdown oluştururken hangi html tag'ını kullanır?-select
         dropdown oluşturmak için select tag ı kullanılır.
         dropdown otomate edilirken select tag'ı kullanılır
@@ -100,13 +104,17 @@ public class C01_Dropdown {
         /*
             1. What is dropdown? Dropdown nedir?
                Dropdown liste oluşturmak için kullanılır
-            2. How to handle dropdown elements? Dropdown nasıl otomate edilir?
-               3 aşamada otomate edilir.İlk önce dropdown'ı locate ederiz.İkinci olarak Select objesi oluştururz.son alarak select objesi ile istediğimiz
-               seçeneği seçeriz
+            2. How to handle dropdown elements? Dropdown nasıl automate edilir?
+               3 aşamada otomate edilir.İlk önce dropdown'ı locate ederiz.
+               İkinci olarak Select class'ı kullanılarak select objesi oluştururz.
+               son alarak select objesi ile istediğimiz seçeneği seçeriz (selectByIndex-selectByVisibleText,selectByValue)
               NOTE: Select objesi oluşturma nedenim dropdown'ların select class'ı ile oluşturulmasıdır
 
             3. Tüm dropdown seçeneklerini nasıl print ederiz(konsolda yazdırırz)?
-                tüm dropdown elementlerini getOptions() methodu ile listeye koyarız sonra seçenekleri loop ile yazdırabiliriz
+                 getOptions()==>tüm dropdown elementlerini getOptions() methodu ile listeye koyarız sonra seçenekleri loop ile yazdırabiliriz
+                                List<WebElement> olarak return eder
+                 getFirstSelectedOption()==> seçili olan ilk seçeneği return eder
+
             4. Bir seçeneğin seçili olduğunu otomate etmek için ne yapılır?
                Ornek: Gun oalrak 10' u seçtik ama ya seçilmediyse?
                getFirstSelectedOption() seçili olan seçeneği return eder.

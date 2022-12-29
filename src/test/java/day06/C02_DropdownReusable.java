@@ -2,6 +2,7 @@ package day06;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +13,6 @@ import java.util.List;
 
 public class C02_DropdownReusable {
 
-    //  REUSABLE METHOD: Dropdown için tekrar tekrr kullanabileceğimiz bir method oluşturalım
 
     WebDriver driver ;
     @Before
@@ -25,6 +25,7 @@ public class C02_DropdownReusable {
         driver.get("https://testcenter.techproeducation.com/index.php?page=dropdown");
     }
 
+    //  REUSABLE METHOD: Dropdown için tekrar tekrr kullanabileceğimiz bir method oluşturalım
     public void selectFromDropdown(WebElement dropdown,String secenek){
       // selectFromDropdown(driver.findElement(By.xpath("//select[@id='year']")),"2005"); -->yıldan 2005 i seçenecek
         // selectFromDropdown(driver.findElement(By.xpath("//select[@id='month']")),"January"); -->aydan january'i seçecek
@@ -41,4 +42,18 @@ public class C02_DropdownReusable {
 
     }
 
+    @Test
+    public void selectFromDropDown(){
+        selectFromDropdown(driver.findElement(By.xpath("//*[@id='year']")),"2005"); //2005'i seçtik
+        selectFromDropdown(driver.findElement(By.id("month")),"November" );
+        selectFromDropdown(driver.findElement(By.id("day")),"10");
+        selectFromDropdown(driver.findElement(By.id("state")),"Texas");
+
+
     }
+
+    }
+
+
+
+
