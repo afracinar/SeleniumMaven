@@ -34,14 +34,14 @@ public abstract class TestBase {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.manage().window().maximize();
     }
 
     //    tearDown
     @After
     public void tearDown() {
-        driver.quit();
+       // driver.quit();
     }
 
 }
