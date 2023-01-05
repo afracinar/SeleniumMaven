@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class TestBase {
 
@@ -44,4 +46,44 @@ public abstract class TestBase {
        // driver.quit();
     }
 
+    //    MULTIPLE WINDOW:
+//    1 parametre alir : Gecis Yapmak Istedigim sayfanin Title
+//    ORNEK:
+//    driver.get("https://the-internet.herokuapp.com/windows");
+//    switchToWindow("New Window");
+//    switchToWindow("The Internet") ==>yeni açılan sayfanın title'ı yazılır
+    public static void switchToWindow(String targetTitle) {
+        String origin = driver.getWindowHandle();
+        for (String handle : driver.getWindowHandles()) {
+            driver.switchTo().window(handle);
+            if (driver.getTitle().equals(targetTitle)) {
+                return;//CIK. break;
+            }
+        }
+        driver.switchTo().window(origin);
+    }
+
+
+    //windowNumber sıfır (0)'dan başlıyor.
+    //index numarasını parametre olarak alır ve o indexli pencereye geçiş yapar
+    //bu method ile yeni açılan sayfanın index'i yazılır
+    public static void switchToWindow(int windowNumber){
+        List<String> list = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(list.get(windowNumber));
+    }
+
+    //yukarıdaki 2 methodun ismi de aynı çünkü içindeki parametrelerin data type'ı farklı
+
+
+    /*   HARD WAIT: bu methodu oluşturmamızın sebebi : thread.sleep de exception atmak zorunda kalıyoruz ve daha kafa karıştırıcı 3 sn için 3000 yazıyoruz
+      //bir şey tekrar tekrar kullanılıyorsa kısa dahi olsa reusable method oluşturmak gerekir.
+     @param : second
+ */
+    public static void waitFor(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
