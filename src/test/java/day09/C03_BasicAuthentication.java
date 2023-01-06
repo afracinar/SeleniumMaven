@@ -8,11 +8,12 @@ import utilities.TestBase;
 public class C03_BasicAuthentication extends TestBase {
 
     /*
-    Authentication herhangi bir internet kullanıcısının uygulamanın ya da programın söz konusu sisteme dahil olup olamayacağını belirleyen doğrulama
+    Authentication(Güvenlik Doğrulamaları) herhangi bir internet kullanıcısının uygulamanın ya da programın söz konusu sisteme dahil olup olamayacağını belirleyen doğrulama
     sistemini ifade eder.
     Uygulama anasayfasındaki kullanıcı adı ve password istemek de bir Authentication'dur
-    Authentication allert'e çok benzer ama allertdeğildir
+    Authentication allert'e çok benzer ama allert değildir
     allert'te inceleme yapılamazdı
+    Özel bir yöntem ile authentication yapılır.özel bir yöntemle otomate yapılır
 
     //Authentication URL : https://username:password@URL
      */

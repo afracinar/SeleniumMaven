@@ -43,7 +43,8 @@ public abstract class TestBase {
     //    tearDown
     @After
     public void tearDown() {
-       // driver.quit();
+        waitFor(5);
+        driver.quit();
     }
 
     //    MULTIPLE WINDOW:

@@ -9,12 +9,13 @@ import java.util.Set;
 
 public class C04_Cookies extends TestBase {
 
-    /*
-     Browser'larda geçici oluşan  bilgi dosyalarıdır
-     Cookies bilgisayarımızda geçici olarak depolanır
+    /* COOKİES : ÇEREZLER ==>sitelerde olan dosyaların bizim alışkanlıklarımızı kolaylaştırmak için kullanılır.Güvenlik zaafı değildir
+     Browser'larda geçici oluşan  bilgi dosyalarıdır.
+     Cookies bilgisayarımızda geçici olarak depolanır.
      Cookies,kişisel bilgiler de dahil olmak üzere birçok bilgi içerebilir
      Web siteleri,ancak sizin izin verdiğiniz bilgilere erişebilir ( şifre kaydedilsin mi vs..)
      Bu web sayfaları sizin izin vermediğiniz bilgilere erişemez ya da bilgisayarınızdaki diğer doyaları görüntüleyemez
+     Yapacağımız otomate ile cookie'ler geçici olarak handle edilir
 
      Cookies automate edebiliriz
 

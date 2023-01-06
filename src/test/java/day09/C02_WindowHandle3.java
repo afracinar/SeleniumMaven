@@ -7,7 +7,7 @@ import utilities.TestBase;
 
 public class C02_WindowHandle3 extends TestBase {
 
-    // Selenium 4 te geldi
+    // Selenium 4 ile geldi.Yeni TAB veya WİNDOW oluşturabiliyoruz.
     @Test
     public void newWindowHandleTest(){
 
