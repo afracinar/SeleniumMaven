@@ -1,4 +1,4 @@
-package day03_practice;
+package day03_practiceee;
 
 import org.junit.Test;
 import org.openqa.selenium.By;

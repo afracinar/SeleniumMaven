@@ -26,6 +26,8 @@ public class C01_Actions1 extends TestBase {
               NOT : actions class'ını her kullanmak istediğimizde yeniden obje oluşturmamız gerekmez.Aynı obje tekrar tekrar driver objesi gibi kullanılabilir
               NOT : actions objesi kullanılarak başlayan her komut,çalışmak için perform() bekler
 
+              perfom() methodu işi bitir demek
+
          MOUSE BASE ACTİONS :
          doubleClick() => Webelement'e çift tıklama yapar
          clickAndHold() => Webelement üzerinde click yapılı olarak bizden komut bekler
@@ -34,6 +36,9 @@ public class C01_Actions1 extends TestBase {
          contextClick() => mouse ile istediğimiz webelemente sağ tıklama yapar
 
          KEYBOARD BASE ACTİONS:
+
+
+
 
      */
 
