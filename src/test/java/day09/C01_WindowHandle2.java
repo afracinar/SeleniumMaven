@@ -7,7 +7,7 @@ import utilities.TestBase;
 
 public class C01_WindowHandle2 extends TestBase {
     /*
-    birden fazla pencerenin açılacağı durumlarda ilk aşamada windowhandle yapmak gerekir
+    birden fazla pencerenin açılacağı durumlarda ilk aşamada windowhandle yapmak gerekir.
      */
 
     @Test
@@ -35,7 +35,7 @@ public class C01_WindowHandle2 extends TestBase {
             //bu aşamadan sonra 2.pencere açılır ve 2.pencerede işlem yapmak istediğimden o pencereye switchTo (geçiş) yapmalıyız
 
 
-          //bizim yazdığımız java koduna göre ilk açılan pencerenin index'i 0,ikinci pencerenin index'i 1'dir
+            //bizim yazdığımız java koduna göre ilk açılan pencerenin index'i 0,ikinci pencerenin index'i 1'dir
         switchToWindow(1); //2.window'a geçiş yaptık.driver artık 2. window'da
 
         //Acilan yeni pencerenin sayfa başlığının (title) “New Window” oldugunu dogrulayin.

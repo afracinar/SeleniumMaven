@@ -18,6 +18,9 @@ public class C01_Actions5_KeyboardBaseActions extends TestBase {
         sendKeys() => Ögeye bir dizi anahtar gönderir
         keyDown() => Klavyede tuşa basma işlemi gerçekleştirir
         keyUp() => Klavyede tuşu serbest bırakma işlemi gerçekleştirir
+
+        NOT: KeyDown() methodundan sonra o işlemi iptal etmek için KeyUp() methodu kullanılır.Yani bir KeyDown kullanırsak
+        o tuşa basılı olarak işlem yapar,KeyUp kullanmadığımız sürece de tuşa basılı kalmaya devam eder
      */
 
     //Create a method keyboardActions
@@ -39,7 +42,7 @@ public class C01_Actions5_KeyboardBaseActions extends TestBase {
                 perform();
 
         //‘ cok pahali!’ Yazdır (SHIFT TUSUNA BASILMAYARAK) Ve ENTER tusuna bas
-        aramaKutusu.sendKeys(" cok pahali!",Keys.ENTER); //burada actions class'a ihtiyacımız yok
+        aramaKutusu.sendKeys(" cok pahali!"+Keys.ENTER); //burada actions class'a ihtiyacımız yok
 
 
     }

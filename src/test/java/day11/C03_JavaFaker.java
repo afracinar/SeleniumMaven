@@ -32,7 +32,7 @@ public class C03_JavaFaker {
          TEST DATA: kullanıcıadi,sifre,tel no,email,sehir,kredi kart no,... gibi verilere data deriz
          Test yaparken birden fazla ve farklı farklı datalara ihtiyacımız olur
          Test Data'ları kimden alınır ?
-              1)BA-Business Analyst'ten gelir (BA,BRD ve FRD hazırlar)
+              1)BA-Business Analyst'ten gelir (BA,Acceptance Criteria'ları yazar, BRD ve FRD hazırlar)
               2)Test Lead
               3)Manuel Tester
               4)Tech Lead & Dev Lead & Dev Lead

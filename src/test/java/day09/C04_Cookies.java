@@ -9,13 +9,15 @@ import java.util.Set;
 
 public class C04_Cookies extends TestBase {
 
-    /* COOKİES : ÇEREZLER ==>sitelerde olan dosyaların bizim alışkanlıklarımızı kolaylaştırmak için kullanılır.Güvenlik zaafı değildir
+    /* COOKİES : ÇEREZLER ==>sitelerde olan dosyaların bizim alışkanlıklarımızı kolaylaştırmak için kullanılır.
+               Mesela şifreleri kolaylık olsun diye kaydetmesi,girdiğimiz üsürnler bir süre sonra benzerlerinin karşımıza çıkması
+      Güvenlik zaafı değildir
      Browser'larda geçici oluşan  bilgi dosyalarıdır.
      Cookies bilgisayarımızda geçici olarak depolanır.
      Cookies,kişisel bilgiler de dahil olmak üzere birçok bilgi içerebilir
      Web siteleri,ancak sizin izin verdiğiniz bilgilere erişebilir ( şifre kaydedilsin mi vs..)
-     Bu web sayfaları sizin izin vermediğiniz bilgilere erişemez ya da bilgisayarınızdaki diğer doyaları görüntüleyemez
-     Yapacağımız otomate ile cookie'ler geçici olarak handle edilir
+     Bu web sayfaları bizim izin vermediğiniz bilgilere erişemez ya da bilgisayarınızdaki diğer doyaları görüntüleyemez
+     Yapacağımız otomate ile cookie'ler "geçici" olarak handle edilir
 
      Cookies automate edebiliriz
 
@@ -43,7 +45,7 @@ public class C04_Cookies extends TestBase {
 
 
         for (Cookie w :allCookies){
-            System.out.println("COOKİE"+w); //cookie'nin tüm bilgilerini yazdırır
+            System.out.println("COOKİE "+w); //cookie'nin tüm bilgilerini yazdırır
             System.out.println("COOKİE İSİMLERİ: "+w.getName()); //cookie'nin ismini yazdırır
         }
 

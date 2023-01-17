@@ -8,8 +8,13 @@ import utilities.TestBase;
 
 public class C01_FileUpload extends TestBase {
 
-       /*
-       sendKeys() methodu ile dosyaları upload dederiz
+       /*    FILE UPLOAD (DOSYA YÜKLEME)
+       Dosya yükleme işlemini anlamak için önce manuel olarak test yapılmalı.
+       Daha sonra dosya,dosyanın bulunduğu yer (path) kullanılarak yüklenebilir
+
+       Selenium masaüstü application'larını otomate edemez !!! Java ile yapabiliriz
+
+       sendKeys() methodu ile dosyaları upload(yükleme) ederiz
        methodun içine dosyanın yolunu yapıştururuz
         */
 

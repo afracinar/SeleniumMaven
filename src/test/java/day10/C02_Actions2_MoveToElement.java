@@ -9,6 +9,7 @@ import utilities.TestBase;
 
 public class C02_Actions2_MoveToElement extends TestBase {
 
+    //moveTo = hovar over(üzerinde gezdirmek-üzerine gelin) ÇOK KULLANILIR
     @Test
     public void hoverOverTest(){
 

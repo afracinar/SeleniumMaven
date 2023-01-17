@@ -8,8 +8,10 @@ import utilities.TestBase;
 
 public class C04_Actions4_DragAndDrop extends TestBase {
 
-    //Method: dragAndDropTest
-    //dragAndDrop methodu srükleme işlemini gerçekleştirir
+    //dragAndDrop methodu sürükleme işlemini gerçekleştirir.
+    // en çok sürükleme için bu method kullanılır.tıklar-sürükler-bırakır
+    //2 parametre ile çalışır.kaynak ve hedef
+
         @Test
     public void dragAndDropTest(){
 
@@ -17,6 +19,7 @@ public class C04_Actions4_DragAndDrop extends TestBase {
             driver.get("https://jqueryui.com/droppable/");
 
             driver.switchTo().frame(0); //kaynak ve hedef elemetnleri iframe içinde olduğu için ilk olarak iframe içine girmemiz gerkiyor
+                                             //iframe sayfa içinde sayfa demektir
 
             //And user moves the target element(Drag me to my target) in to  destination(Drop here)
             Actions actions = new Actions(driver);
@@ -50,7 +53,7 @@ public class C04_Actions4_DragAndDrop extends TestBase {
                 moveToElement(hedef). //hedefe koy
                 release(). //kaynağı bırak
                 build(). //önceki methodların ilişkisini kur güçlendir.Kullanılması tercih edilir şart değil uzun kodlarda tercih edilir
-                perform(); //işlemi gerçekleştir
+                perform(); //işlemi gerçekleştir,uygula
 
     }
 
@@ -68,7 +71,11 @@ public class C04_Actions4_DragAndDrop extends TestBase {
         Actions actions = new Actions(driver);
 
         //moveByOffSet() methodlarının içine x,y koordinat değerleri verilir
-        actions.clickAndHold(kaynak).moveByOffset(465,10).build().perform();
+        actions.
+                clickAndHold(kaynak).
+                moveByOffset(465,10).
+                build().
+                perform();
 
 
 

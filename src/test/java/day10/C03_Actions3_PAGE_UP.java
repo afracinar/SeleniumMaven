@@ -7,10 +7,13 @@ import utilities.TestBase;
 
 public class C03_Actions3_PAGE_UP extends TestBase {
 
-    //sayfayı ne kadr aşağıya veya yukarıya sürükleyeceğini bilemeyiz bu dezavantajdır.js ile limit koyabiliriz
+    //sayfayı aşağı yukarı kaydırma konusunda java script executer daha çok tercih edilir
+    //sayfayı ne kadr aşağıya veya yukarıya sürükleyeceğini bilemeyiz bu dezavantajdır.js executer ile limit koyabiliriz
     //PAGE_DOWN : sayfayı aşağı sürekle
     //PAGE_UP : sayfayı yukarı ittir
-    //Method : scrollUpDown()
+    //scroll down = aşağı kaydır
+    //scroll up = yukarı kaydır
+    //sendKeys methodu kullanarak yapılır
     @Test
     public void scrollUpDown(){
 

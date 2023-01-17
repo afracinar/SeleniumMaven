@@ -9,6 +9,10 @@ import java.util.Set;
 
 public class C01_WindowHandle1 extends TestBase {
 
+    //getWindowHandle sayfanın ID'sini verir.
+    //Birden fazla pencere veya sekme açılması durumunda biz fiziksel olarak yeni pencere açıldığını görsek bile driver hala önceki
+    //pencerede kalır.Bu yüzden biz yeni açılan pencereye geçiş yapmak için getWindowHandle methodunu kullanırız ve yeni pencereye
+    //switchTo yaparız
 
     @Test
     public void handleWindowTest() throws InterruptedException {
@@ -27,17 +31,19 @@ public class C01_WindowHandle1 extends TestBase {
         String actualTitle = driver.getTitle();
         String expectedTitle = "The Internet";
         Assert.assertEquals(expectedTitle, actualTitle);
+
         //Click Here butonuna basın.
         driver.findElement(By.xpath("(//*[@target='_blank'])[1]")).click();
         Thread.sleep(3000);
+
         // BU NOKTADA 2 PENCERE ACIK VE IKINCISINE GECIS YAPMAK ISTIYORUM
         // BUNUN ICIN driver.getWindowHandles() ILE TUM PENCERELERIN ID'LERINI ALALIM
         Set<String> allWindowHandles = driver.getWindowHandles();// {window1Handle, window2Handle}
         System.out.println(allWindowHandles);
-        for (String eachHandle : allWindowHandles) {
+        for (String w : allWindowHandles) {
             // EGER LISTEDEKI ID WINDOW1'E ESIT DEGILSE OTOMATIK OLARAK WINDOW2'YE(BIR SONRAKINE) ESITTIR.
-            if (!eachHandle.equals(window1Handle)) {
-                driver.switchTo().window(eachHandle);//Burdaki eachHandle window2 handle'ina esittir.
+            if (!w.equals(window1Handle)) {
+                driver.switchTo().window(w);//Burdaki eachHandle window2 handle'ina esittir.
                 break;
             }
         }

@@ -15,17 +15,17 @@ public class C03_ExtentReports extends TestBase {
 
     //Extent reports otomasyon raporları almak için kullanılır
     //Extent report ayrı bir API 'dır.Extent reports selenium dışındada kullanılabilir.
-    // Bu API'dan gelen methodlar yardımıyla rapor şablonu oluşturulabilir
-      // Extent reports ile alakalı hatırlamamız gereken 3 class: (bunların isimlerini bilmek gerekiyor)
+    //Bu API'dan gelen methodlar yardımıyla rapor şablonu oluşturulabilir
+    // Extent reports ile alakalı hatırlamamız gereken 3 class: (bunların isimlerini bilmek gerekiyor)
     protected static ExtentReports extentReports;  //şablonu oluşturdu
     protected static ExtentHtmlReporter extentHtmlReporter; //şablonu bize gösterir,projeye ekler
-    protected static ExtentTest extentTest; //raporlama işlemini yapar.Logları rapora yazdırır
+    protected static ExtentTest extentTest; //raporlama işlemini yapar.Logları rapora yazdırır (sout)
 
 
     @Test
     public void extentReportsTest(){
 
-        //      REPORT  PATH
+        //      REPORT PATH
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         String path = System.getProperty("user.dir")+"/test-output/reports/"+currentTime+"html_report.html";
 
@@ -53,12 +53,13 @@ public class C03_ExtentReports extends TestBase {
             //        Raporu projeme ekliyorum
         extentReports.attachReporter(extentHtmlReporter);
 
-        //Extent Test objesini oluşturduk
+        //Extent Test objesini oluşturduk              //1.kısısm zorunlu        //2.kısım zorunlu değil
         extentTest = extentReports.createTest("Extent Report Login Test","Smoke Test Raporu");
 
         //Tüm ayarlar bitti.Extent Test objesiyle loglama(rapora yazdırma) işlemini yapabiliriz
-        extentTest.pass("Kullanıcı ana sayfaya gider"); // rapora bilgilendirme mesajı ekledik.burda konsola değil rapora ekleme yapıyoruz
         driver.get("https://techproeducation.com");
+        extentTest.pass("Kullanıcı ana sayfaya gider"); // rapora bilgilendirme mesajı ekledik.burda konsola değil rapora ekleme yapıyoruz
+
 
         //lms sayfasına gidelim
         extentTest.pass("Kullanıcı LMS sayfasına gider");

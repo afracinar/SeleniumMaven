@@ -14,12 +14,15 @@ public class C02_Actions6_Interwiew {
            Actions methodları önemlidir.Ve tekrar tekrar kullanmam gerektiğinden Actions methodlarını içeren reusable methodlar oluşturdum ve
            gerektiğinde bu usable methodları kullanıyorum.Örneğin;
            rightClick methodunu bir elemente sağa tıklamak için test class'ımda çağırabilirim : rightClickOnElementActions()
+           draganddroopActions methodu elementi sürüklemek ve bırakmak için oluşturduğum methodlardandır
 
         3)Hangi methdoları kullandın ne işe yarar ?
            doubleClick() = locatini verdiğimiz elemete çift tıklama yapar
            contextClick() = locate'ını verdiğimiz elemente sağ tıklama yapar
-           moveToElement() =
-           dragAndDrop() =
+           moveToElement() = mouse'u hareket ettirir
+           dragAndDrop() = elementi sürükler ve bırakır
 
      */
+
+
 }

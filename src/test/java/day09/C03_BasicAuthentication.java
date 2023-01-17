@@ -8,11 +8,13 @@ import utilities.TestBase;
 public class C03_BasicAuthentication extends TestBase {
 
     /*
-    Authentication(Güvenlik Doğrulamaları) herhangi bir internet kullanıcısının uygulamanın ya da programın söz konusu sisteme dahil olup olamayacağını belirleyen doğrulama
-    sistemini ifade eder.
+    Authentication(Güvenlik Doğrulamaları):
+    Herhangi bir internet kullanıcısının,uygulamanın ya da programın söz konusu sisteme dahil olup olamayacağını belirleyen doğrulama sistemini ifade eder.
     Uygulama anasayfasındaki kullanıcı adı ve password istemek de bir Authentication'dur
-    Authentication allert'e çok benzer ama allert değildir
-    allert'te inceleme yapılamazdı
+    Authentication allert'e çok benzer ama allert değildir.Alert'te tek bir tane kutucuk olur sendkeys kapabiliriz ama Authentication'da 2 kutucuk vardır
+       sendKeys yapamayız
+    Eğer Authentication olursa bize bu söylenir testcase'ler ona göre yazılır
+
     Özel bir yöntem ile authentication yapılır.özel bir yöntemle otomate yapılır
 
     //Authentication URL : https://username:password@URL
@@ -29,7 +31,7 @@ public class C03_BasicAuthentication extends TestBase {
                                    //admin   :  admin@https:/
         //Username    : admin
         //password    : admin
-
+        //                         https://............  the-internet.herokuapp.com/basic_auth
         //AUTHENTICATION URL'miz : https://admin:admin@the-internet.herokuapp.com/basic_auth
         driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
         waitFor(3);

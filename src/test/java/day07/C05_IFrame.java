@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
 public class C05_IFrame extends TestBase {
-    /*
+    /* IFRAME => SAYFA İÇİNDE SAYFA-YENİ BİR SAYFA-YOUTUBE VB EKLENİRSE KULLANILIR
         Interwiev soruları***
           ***Bir sayfadaki toplam iframe sayısımı nasıl buluruz?
             İframe'ler iframe tag'ı kullanılarak oluşturulur

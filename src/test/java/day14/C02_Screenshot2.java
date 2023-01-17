@@ -30,6 +30,7 @@ public class C02_Screenshot2 extends TestBase {
         String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";
         FileUtils.copyFile(image,new File(path));
 
+        //reusable method ile yapımı
         WebElement logo = driver.findElement(By.xpath("//*[@id='NDU1Ojc5MQ==-1']"));
         takeScreenshotOfElement(logo);
     }

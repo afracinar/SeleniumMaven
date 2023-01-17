@@ -74,14 +74,14 @@ public abstract class TestBase {
 
 
     //windowNumber sıfır (0)'dan başlıyor.
-    //index numarasını parametre olarak alır ve o indexli pencereye geçiş yapar
+    //index numarasını parametre olarak alır ve o indexli pencereye geçiş yapar.mesela 3. pencereye geçiş yapmak istiyorsak 2 yazarız indexi 2 olur
     //bu method ile yeni açılan sayfanın index'i yazılır
     public static void switchToWindow(int windowNumber){
         List<String> list = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(list.get(windowNumber));
     }
 
-    //yukarıdaki 2 methodun ismi de aynı çünkü içindeki parametrelerin data type'ı farklı
+    //yukarıdaki 2 methodun ismi de aynı olabilir çünkü içindeki parametrelerin data type'ı farklı.bu overload methoddur
 
 
     /*   HARD WAIT: bu methodu oluşturmamızın sebebi : thread.sleep de exception atmak zorunda kalıyoruz ve daha kafa karıştırıcı 3 sn için 3000 yazıyoruz
