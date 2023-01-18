@@ -12,6 +12,8 @@ import java.time.Duration;
 
 public class C03_ExpilicitWait extends TestBase {
 
+    // wait'lerle ilgili reusable method oluşturduk
+
     @Test
     public void expicitWaitTest(){
 
@@ -25,12 +27,14 @@ public class C03_ExpilicitWait extends TestBase {
    //     WebElement helloWorld = driver.findElement(By.xpath("//div[@id='finish']//h4"));
     //    Assert.assertEquals(helloWorld.getText(),"Hello World!");
 
-        //IMPLICIT WAIT ILE TEST CASE CALIŞMADI çünkü eleman hemen gözükmedi yavaş bir şekilde görünür hale geldi
+        //IMPLICIT WAIT ILE TEST CASE CALIŞMADI çünkü eleman hemen gözükmedi yavaş bir şekilde görünür hale geldi bu yüzden IMPLICIT WAIT yeterli gelmedi
         //ÇÖZÜM EXPLİCİT WAİT'TE
 
         //2 ADIMDA EXPLİCİT WAİT OLUŞTURULUR
-          //1: WebDriverWait objesi oluşturulur.2 parametre ile çalışır
+
+          //1: WebDriverWait objesi oluşturulur.2 parametre ile çalışır.aynı sınıf içinde bu obje tekrar tekrar kullanılabilir
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
           //2: wait objesini kullanarak bekleme problemini çözmeye çalış
         WebElement helloWorldElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='finish']//h4")));
         String helloWorldText = helloWorldElement.getText();

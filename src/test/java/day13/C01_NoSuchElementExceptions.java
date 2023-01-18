@@ -14,14 +14,16 @@ public class C01_NoSuchElementExceptions extends TestBase {
           NullPointerException
           StaleElementReferenceException
           WebDriverException
-       -Hangi çeşit wait tercih edersin
+          JavascriptException
+       -Çözüm ne?
+       -Hangi çeşit wait tercih edersin? (Excilipt mi Implicit wait mi?
        -Neden onu tercih edersin?
-       -Senkronizasyon problemini nasıl çözersin
+       -Senkronizasyon problemini nasıl çözersin?
      */
 
     /*
     NoSuchElementException:
-      Yanlış locator
+      Yanlış locator (Locator is wrong)
       Popup,Iframe,Yeni Pencere
       Sayfa dolmada problemler ve yavaşlamalar
       Saklı olan element

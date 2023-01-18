@@ -15,7 +15,7 @@ public class C01_FileUpload extends TestBase {
        Selenium masaüstü application'larını otomate edemez !!! Java ile yapabiliriz
 
        sendKeys() methodu ile dosyaları upload(yükleme) ederiz
-       methodun içine dosyanın yolunu yapıştururuz
+       methodun içine dosyanın yolunu yapıştırırız
         */
 
     @Test
@@ -25,7 +25,7 @@ public class C01_FileUpload extends TestBase {
         driver.get("https://the-internet.herokuapp.com/upload");
 
         //chooseFile butonuna basalım
-        WebElement chooseFileButton = driver.findElement(By.id("file-upload"));
+        WebElement chooseFileButton = driver.findElement(By.id("file-upload"));  //input tagı olduğu için type="file" olduğundan tekrar click yapmaya gerek yok
 
         //yüklemek istediğiniz dosyayı seçelim
         String dosyaYolu = System.getProperty("user.home") + "/Desktop/logo.jpeg";
